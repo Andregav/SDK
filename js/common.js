@@ -3,6 +3,7 @@ var btns = header.getElementsByClassName("content_button");
 var method = document.getElementsByClassName("emoney_method");
 var amount = document.getElementById("amount");
 var procent = document.getElementById("procent");
+var mobmethod = document.getElementsByClassName("mobmethod");
 
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
@@ -39,6 +40,17 @@ for (var i = 0; i < method.length; i++) {
     });
 }
 
+for (var i = 0; i < mobmethod.length; i++) {
+    mobmethod[i].addEventListener("click", function(myFunction) {
+        document.getElementById("procent").textContent = this.value;
+        var y = document.getElementById("sidebar_amount");
+        var x = this.value;
+        var procent = (+y.textContent * +x) / 100;
+        document.getElementById("sum").innerHTML = procent;
+        var sum = +y.textContent + +procent;
+        document.getElementById("amount").setAttribute("value", sum);
+    });
+}
 
 var button = document.querySelector(".slide_open");
 var popup_mob_menu = document.querySelector(".slide_block");
