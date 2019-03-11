@@ -40,16 +40,18 @@ for (var i = 0; i < method.length; i++) {
 }
 
 
-var slide_open = document.querySelector(".slide_open");
-var slide_close = document.querySelector(".slide_close");
-var slide_block = document.querySelector(".slide_block");
+var button = document.querySelector(".slide_open");
+var popup_mob_menu = document.querySelector(".slide_block");
+var button_close = document.querySelector(".slide_close");
 
-slide_open.addEventListener("touchmove", function(event) {
+
+button.addEventListener("click", function(event) {
     event.preventDefault();
-    slide_block.classList.add("popup_slideblock");
+    popup_mob_menu.style.display = "flex";
+
 });
 
-slide_open.addEventListener("touchmove", function(event) {
+button_close.addEventListener("click", function(event) {
     event.preventDefault();
-    slide_block.classList.remove("popup_slideblock");
+    popup_mob_menu.style.display = "none";
 });
