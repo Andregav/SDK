@@ -40,16 +40,14 @@ for (var i = 0; i < method.length; i++) {
     });
 }
 
-for (var i = 0; i < mobmethod.length; i++) {
-    mobmethod[i].addEventListener("touchstart", function(myFunction) {
-        document.getElementById("procent").textContent = this.value;
-        var y = document.getElementById("sidebar_amount");
-        var x = this.value;
-        var procent = (+y.textContent * +x) / 100;
-        document.getElementById("sum").innerHTML = procent;
-        var sum = +y.textContent + +procent;
-        document.getElementById("amount").setAttribute("value", sum);
-    });
+function myСalculation() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("procent").textContent = x;
+    var y = document.getElementById("sidebar_amount");
+    var procent = (+y.textContent * +x) / 100;
+    document.getElementById("sum").innerHTML = procent;
+    var sum = +y.textContent + +procent;
+    document.getElementById("amount").setAttribute("value", sum);
 }
 
 var button = document.querySelector(".slide_open");
