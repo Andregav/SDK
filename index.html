@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Onpay.ru</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="libr/font-awesome/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+</head>
+
+<body>
+    <!-- Container (Sidebar) -->
+    <aside class="sidebar">
+        <h2 class="sidebar_headBuy">You are buying</h2>
+        <p class="sidebar_textFlight">Flight in space /Jupiter Area</p>
+        <p class="sidebar_textFrom">From IO to GANIMED, J29, 2048, G5/42</p>
+        <p class="sidebar_textSpace">Spaceship "Queen of the Sun</p>
+        <p class="sidebar_amount"><span id="sidebar_amount">42350.00</span> USD</p>
+        <p class="sidebar_textAmount">Amount to pay without the payment system commission</p>
+        <h2 class="sidebar_headSel">Seller</h2>
+        <p class="sidebar_textNational">National Aeronautics and Space<br> Administration (NASA) <img src="img/icons/ufo.svg" alt=""> </p>
+        <p class="sidebar_textAdress">Headquarters 300 E. Street SW, Suite 5R30</p>
+        <p class="sidebar_textRating"><span>Rating:</span> 5</p>
+        <p class="sidebar_textReview"><span>Reviews:</span> 308 042</p>
+        <p class="sidebar_textProvid">Provided by Onpay.ru</p>
+    </aside>
+    <!--Mobile header -->
+    <div class="mob-block">
+        <div class="mob-header">
+            <p class="mob-header_text">Amount to pay</p>
+            <p class="mob-header_amount">42350.00 USD</p>
+            <div class="mob-header_slide slide_open"></div>
+        </div>
+        <div class="mob-block_slideblock slide_block">
+            <div class="slide-wrap">
+                <h2 class="sidebar_headBuy">You are buying</h2>
+                <p class="sidebar_textFlight">Flight in space /Jupiter Area</p>
+                <p class="sidebar_textFrom">From IO to GANIMED, J29, 2048, G5/42</p>
+                <p class="sidebar_textSpace">Spaceship "Queen of the Sun</p>
+                <p class="sidebar_amount">42350.00 USD</p>
+                <p class="sidebar_textAmount">Amount to pay without the payment system commission</p>
+                <div class="mob-block_slide slide_close"></div>
+            </div>
+        </div>
+    </div>
+    <!-- -->
+    <!-- Container (Content) -->
+    <section class="content">
+        <div class="content-wrap">
+            <div class="content_header">
+                <h2 class="content_head">Payment method</h2>
+                <p class="content_header-text">Payment limits</p>
+            </div>
+            <!-- Mobile payment method -->
+            <div class="select-wrapper">
+                <select>
+                    <option value="0">Qiwi Wallet</option>
+                    <option value="1">Skrill</option>
+                    <option value="2">Payoneer</option>
+                    <option value="3">Payza</option>
+                    <option value="4">Yandex.Money</option>
+                    <option value="5">PayPal</option>
+                </select>
+                <div class="select-arrow"></div>
+                <div class="select-arrow"></div>
+            </div>
+            <!-- -->
+            <div id="buttons" class="content_btn-group">
+                <button onclick="openPayment('emoney', this)" class="button-emoney content_button active" id="defaultOpen">E-money</button>
+                <button onclick="openPayment('mobile', this)" class="content_button">Mobile Payments</button>
+                <button onclick="openPayment('cards', this)" class="content_button">Bank Cards</button>
+                <button onclick="openPayment('transfers', this)" class="content_button">Bank Transfers</button>
+                <button onclick="openPayment('terminals', this)" class="button-terminal content_button">Terminals</button>
+            </div>
+            <div class="mob-hidden">
+                <div id="emoney" class="emoney tabcontent">
+                    <div class="emoney_method active_emoney_method">
+                        <div class="emoney_img-wrap">
+                            <img src="img/logos/qiwi.svg" alt="">
+                        </div>
+                        <p class="emoney_headmethod">Qiwi Wallet</p>
+                        <p class="emoney_textmethod">Payment Fees <span>1.5</span>%</p>
+                    </div>
+                    <div class="emoney_method">
+                        <div class="emoney_img-wrap">
+                            <img src="img/logos/skrill.svg" alt="">
+                        </div>
+                        <p class="emoney_headmethod">Skrill</p>
+                        <p class="emoney_textmethod">Payment Fees <span>2.5</span>%</p>
+                    </div>
+                    <div class="emoney_method">
+                        <div class="emoney_img-wrap">
+                            <img src="img/logos/payoneer.svg" alt="">
+                        </div>
+                        <p class="emoney_headmethod">Payoneer</p>
+                        <p class="emoney_textmethod">Payment Fees <span>5</span>%</p>
+                    </div>
+                    <div class="emoney_method">
+                        <div class="emoney_img-wrap">
+                            <img src="img/logos/payza.svg" alt="">
+                        </div>
+                        <p class="emoney_headmethod">Payza</p>
+                        <p class="emoney_textmethod">Payment Fees <span>2.5</span>%</p>
+                    </div>
+                    <div class="emoney_method-wrap">
+                        <div class="emoney_method">
+                            <div class="emoney_img-wrap">
+                                <img src="img/logos/yandex.svg" alt="">
+                            </div>
+                            <p class="emoney_headmethod">Yandex.Money</p>
+                            <p class="emoney_textmethod">Payment Fees <span>2.5</span>%</p>
+                        </div>
+                        <div class="emoney_method">
+                            <div class="emoney_img-wrap">
+                                <img src="img/logos/paypal.svg" alt="">
+                            </div>
+                            <p class="emoney_headmethod">PayPal</p>
+                            <p class="emoney_textmethod">Payment Fees <span>0.5</span>%</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="mobile" class="mobile tabcontent">
+                    <div class="emoney_method">
+                        <div class="emoney_img-wrap">
+                            <img src="img/logos/qiwi.svg" alt="">
+                        </div>
+                        <p class="emoney_headmethod">Qiwi Wallet</p>
+                        <p class="emoney_textmethod">Mobile Payments</p>
+                    </div>
+                </div>
+                <div id="cards" class="cards tabcontent">
+                    <div class="emoney_method">
+                        <div class="emoney_img-wrap">
+                            <img src="img/logos/payza.svg" alt="">
+                        </div>
+                        <p class="emoney_headmethod">Payza</p>
+                        <p class="emoney_textmethod">Bank Cards</p>
+                    </div>
+                </div>
+                <div id="transfers" class="transfers tabcontent">
+                    <div class="emoney_method">
+                        <div class="emoney_img-wrap">
+                            <img src="img/logos/skrill.svg" alt="">
+                        </div>
+                        <p class="emoney_headmethod">Skrill</p>
+                        <p class="emoney_textmethod">Bank Transfers</p>
+                    </div>
+                </div>
+                <div id="terminals" class="terminals tabcontent">
+                    <div class="emoney_method">
+                        <div class="emoney_img-wrap">
+                            <img src="img/logos/payoneer.svg" alt="">
+                        </div>
+                        <p class="emoney_headmethod">Payoneer</p>
+                        <p class="emoney_textmethod">Terminals</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="content_head">Payment</h2>
+            <form action="/action_page.php" id="myForm">
+                <div class="form-row form_flex">
+                    <div class="col-name">
+                        <label for="amount" class="amoun">Amount with commission</label>
+                    </div>
+                    <div class="col-input col-amoun">
+                        <input type="text" id="amount" name="amount" placeholder="Your amount.." class="amoun-input" readonly>
+                    </div>
+                    <p class="form_fee"><span class="fee_text">payment system fees</span><br> <span id="procent">1.5</span>% (+$<span id="sum">635.25</span>)</p>
+                </div>
+                <div class="form-row form_flex">
+                    <div class="col-name">
+                        <label for="account" class="account"><span id="nameMethod">Qiwi Wallet</span> account</label>
+                    </div>
+                    <div class="col-input">
+                        <input type="text" id="account" name="account" placeholder="Your account.." class="account-input" required />
+                    </div>
+                </div>
+                <div class="form-row form_flex">
+                    <div class="col-name">
+                        <label for="phone" class="phone">Phone</label>
+                    </div>
+                    <div class="col-input">
+                        <input type="tel" name="phone" placeholder="+380" data-validation-required-message="You didn't input phone number" required class="phone-input">
+                    </div>
+                </div>
+                <div class="form-row form_flex-textarea">
+                    <div class="col-name">
+                        <label for="message" class="message">Message for seller</label>
+                    </div>
+                    <div class="col-input">
+                        <textarea id="message" name="message" placeholder="If you need additional services, please inform the seller about this" class="message-input"></textarea>
+                    </div>
+                </div>
+                <div class="form-row form_flex">
+                    <div class="col-name col-captcha">
+                        <label for="message" class="captcha">Enter captcha</label>
+                    </div>
+                    <div class="mob-captcha">
+                        <div class="col-input">
+                            <div class="col-input">
+                                <input type="text" name="captcha" required class="captcha-input">
+                            </div>
+                        </div>
+                        <div class="captcha-text"></div>
+                    </div>
+                </div>
+                <p class="form-text">By clicking "Confirm payment" I realize that the seller is responsible for the quality of the product/services and accept the <a href="#">terms of the agreement</a></p>
+                <button type="submit" class="form-btn">Confirm payment</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+    </footer>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
