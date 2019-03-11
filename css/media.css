@@ -193,6 +193,7 @@
     }
 
     .mob-header {
+        width: 100%;
         position: relative;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -256,6 +257,8 @@
         margin-left: 17px;
         margin-top: 16px;
         margin-right: 16px;
+        position: relative;
+        width: 100%;
     }
 
     .sidebar_headBuy {
@@ -293,7 +296,7 @@
         width: 28px;
         height: 2px;
         left: 49%;
-        top: 219px;
+        top: 95%;
         background: #6066F3;
         border-radius: 5px;
     }
@@ -461,7 +464,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {}
+@media screen and (max-width: 601px) {}
 
 @media screen and (max-width: 569px) {}
 
@@ -482,9 +485,12 @@
         background-position: 285px 50%;
     }
 
-    .mob-header_slide,
-    .mob-block_slide {
+    .mob-header_slide {
         left: 174px;
+    }
+
+    .mob-block_slide {
+        left: 148px;
     }
 
     .mob-captcha {
@@ -496,11 +502,18 @@
     .amoun-input {
         background-position: 95% 50%;
     }
+
+    .mob-header_slide,
+    .mob-block_slide {
+        left: 49%;
+    }
+
 }
 
 @media screen and (max-width: 320px) {
-    .mob-header_slide {
-        left: 49%;
+
+    .mob-block_slide {
+        top: 235px;
     }
 
     .mob-captcha {
