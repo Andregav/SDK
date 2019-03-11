@@ -41,7 +41,7 @@ for (var i = 0; i < method.length; i++) {
 }
 
 for (var i = 0; i < mobmethod.length; i++) {
-    mobmethod[i].addEventListener("click", function(myFunction) {
+    mobmethod[i].addEventListener("touchstart", function(myFunction) {
         document.getElementById("procent").textContent = this.value;
         var y = document.getElementById("sidebar_amount");
         var x = this.value;
