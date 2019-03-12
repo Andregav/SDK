@@ -19,7 +19,7 @@ function openPayment(paymentName, elmnt) {
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-    document.getElementById(paymentName).style.display = "flex";
+    document.getElementById(paymentName).style.display = "block";
 }
 document.getElementById("defaultOpen").click();
 

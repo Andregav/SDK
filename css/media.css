@@ -1,27 +1,44 @@
 @media screen and (max-width: 1440px) {
-    .emoney_method-wrap .emoney_method:first-child {
-        margin-right: 90px;
+    .emoney_method {
+        width: 15.6%;
     }
 }
 
 @media screen and (max-width: 1367px) {
-    .emoney_method-wrap .emoney_method:first-child {
-        margin-right: 55px;
+    .emoney_method {
+        width: 18.87%;
     }
 }
 
 @media screen and (max-width: 1280px) {
-    .emoney_method-wrap .emoney_method:first-child {
-        margin-right: 37px;
+    .emoney_method {
+        width: 18.72%;
     }
-
 }
 
-@media screen and (max-width: 1194px) {}
+@media screen and (max-width: 1201px) {
+    .emoney_method {
+        width: 23.61%;
+    }
+
+    .emoney_img-wrap {
+        width: 170px;
+    }
+}
+
+@media screen and (max-width: 1194px) {
+    .emoney_method {
+        width: 23.6%;
+    }
+}
 
 @media screen and (max-width: 1112px) {
-    .emoney_method-wrap .emoney_method:first-child {
-        margin-right: 55px;
+    .emoney_method {
+        width: 23.4%;
+    }
+
+    .emoney_img-wrap {
+        width: 100%;
     }
 
     .amoun-input {
@@ -53,9 +70,8 @@
 }
 
 @media screen and (max-width: 1024px) {
-
-    .emoney_method-wrap .emoney_method:first-child {
-        margin-right: 12px;
+    .emoney_method {
+        width: 31.49%;
     }
 }
 
@@ -72,10 +88,6 @@
 
     .emoney_method {
         margin-bottom: 20px;
-    }
-
-    .emoney_method-wrap .emoney_method:first-child {
-        margin-right: 15px;
     }
 
     .message-input {
@@ -102,16 +114,6 @@
         margin-right: 15px;
     }
 
-    .emoney_method-wrap {
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-    }
-
-    .emoney_method-wrap .emoney_method:first-child {
-        margin-right: 10px;
-    }
-
     .sidebar {
         position: relative;
     }
@@ -121,6 +123,10 @@
         margin-top: 543px;
         margin-left: 29px;
     }
+
+    .emoney::after {
+        display: inline-block;
+    }
 }
 
 @media screen and (max-width: 847px) {
@@ -129,13 +135,13 @@
         margin-top: 530px;
         margin-left: 29px;
     }
+
+    .emoney_method {
+        width: 31.4%;
+    }
 }
 
 @media screen and (max-width: 835px) {
-    .emoney_method-wrap .emoney_method:first-child {
-        margin-right: 5px;
-    }
-
     .captcha-input {
         margin-right: 8px;
     }
@@ -147,6 +153,9 @@
 }
 
 @media screen and (max-width: 812px) {
+    .emoney_method {
+        width: 31.3%;
+    }
 
     .col-captcha {
         margin-right: 0;
@@ -160,12 +169,6 @@
     .emoney {
         -ms-flex-pack: distribute;
         justify-content: space-around;
-    }
-
-    .emoney_method-wrap {
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-        width: 100%;
     }
 }
 

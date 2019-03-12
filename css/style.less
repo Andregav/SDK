@@ -205,23 +205,22 @@ body {
 }
 
 .emoney {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: 38px;
 }
 
 .emoney_method {
-    width: 170px;
-    height: 146px;
-    margin-bottom: 62px;
-}
-
-.emoney_method-wrap {
     display: flex;
-
-    .emoney_method:first-child {
-        margin-right: 2px;
-    }
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 15.7%;
+    height: 146px;
+    margin-bottom: 24px;
+    cursor: pointer;
 }
 
 .emoney_img-wrap {
@@ -229,7 +228,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: @blue-light;
-    width: 170px;
+    width: 100%;
     height: 100px;
     border-radius: 6px;
     margin-bottom: 10px;
@@ -271,6 +270,12 @@ body {
     border-radius: 6px;
 }
 
+.emoney:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 form {
     margin-top: 24px;
 }
@@ -303,7 +308,23 @@ form {
     .p-mixin;
 }
 
-.amoun-input,
+.amoun-input {
+    width: 308px;
+    margin-right: 10px;
+    padding: 11px 44px 11px 16px;
+    background: url(../img/icons/USD.svg) no-repeat;
+    background-position: 258px 50%;
+    background-size: 35px;
+    background-color: #EFEFEF;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: none;
+    font-family: @font-family_medium;
+    line-height: 20px;
+    font-size: 16px;
+    cursor: default
+}
+
 .account-input,
 .phone-input,
 .captcha-input {
@@ -311,16 +332,6 @@ form {
     border: 2px solid #B3B3B3;
     box-sizing: border-box;
     border-radius: 6px;
-}
-
-.amoun-input {
-    width: 308px;
-    margin-right: 10px;
-    padding: 15px 44px 15px 16px;
-    background: url(../img/icons/USD.svg) no-repeat;
-    background-position: 258px 50%;
-    background-size: 42px;
-    background-color: #EFEFEF;
 }
 
 .form_fee {
@@ -333,7 +344,7 @@ form {
 .account-input,
 .phone-input {
     width: 308px;
-    padding: 15px 7px 15px 16px;
+    padding: 9px 7px 9px 16px;
 }
 
 .account-input:active,
@@ -368,8 +379,9 @@ textarea:hover {
 .message-input {
     width: 488px;
     height: 137px;
-    border-radius: 6px;
+    border: 2px solid #B3B3B3;
     box-sizing: border-box;
+    border-radius: 6px;
     resize: none;
     padding: 12px 16px 0px 16px;
 }
@@ -380,8 +392,7 @@ textarea:hover {
 
 .captcha-input {
     width: 218px;
-    height: 42px;
-    padding: 15px 7px 15px 16px;
+    padding: 9px 7px 9px 16px;
     margin-right: 8px;
 }
 
@@ -427,6 +438,7 @@ textarea:hover {
     font-size: 18px;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .mob-block,
