@@ -6,6 +6,10 @@
 @font-family: 'GoogleSans';
 @font-family_bold: 'GoogleSans-Bold';
 @font-family_medium: 'GoogleSans-Medium';
+@font-family_gloria: 'GloriaHallelujah';
+@font-family_gorditas: 'Gorditas';
+@font-family_futura: 'Futura';
+@font-family_hei: 'Hei';
 @font-size_h: 24px;
 @font-size_p: 16px;
 
@@ -22,6 +26,26 @@
 @font-face {
     font-family: GoogleSans-Medium;
     src: url(../libr/font/Google-Sans-Font/GoogleSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: GloriaHallelujah;
+    src: url(../libr/font/GloriaHallelujah.ttf);
+}
+
+@font-face {
+    font-family: Gorditas;
+    src: url(../libr/font/Gorditas-Bold.ttf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(../libr/font/Futura-Bold.ttf);
+}
+
+@font-face {
+    font-family: Hei;
+    src: url(../libr/font/mshei.ttf);
 }
 
 html,
@@ -304,7 +328,7 @@ form {
 .account,
 .phone,
 .message,
-.captcha {
+.captcha-title {
     .p-mixin;
 }
 
@@ -401,6 +425,31 @@ textarea:hover {
     height: 42px;
     background: #EFEFEF;
     border-radius: 6px;
+}
+
+.captcha {
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+    margin-top: 11px;
+}
+
+.captcha_gloria {
+    font-family: @font-family_gloria;
+}
+
+.captcha_gorditas {
+    font-family: @font-family_gorditas;
+}
+
+.captcha_futura {
+    font-family: @font-family_futura;
+}
+
+.captcha_hei {
+    font-family: @font-family_hei;
 }
 
 .form-row:after {
