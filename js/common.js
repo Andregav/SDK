@@ -4,6 +4,10 @@ var method = document.getElementsByClassName("emoney_method");
 var amount = document.getElementById("amount");
 var procent = document.getElementById("procent");
 var mobmethod = document.getElementsByClassName("mobmethod");
+var button = document.querySelector(".slide_open");
+var popup_mob_menu = document.querySelector(".slide_block");
+var button_close = document.querySelector(".slide_close");
+
 
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
@@ -49,11 +53,6 @@ function myСalculation() {
     var sum = +y.textContent + +procent;
     document.getElementById("amount").setAttribute("value", sum);
 }
-
-var button = document.querySelector(".slide_open");
-var popup_mob_menu = document.querySelector(".slide_block");
-var button_close = document.querySelector(".slide_close");
-
 
 button.addEventListener("click", function(event) {
     event.preventDefault();
